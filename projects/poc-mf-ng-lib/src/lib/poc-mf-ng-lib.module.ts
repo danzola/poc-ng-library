@@ -12,7 +12,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
   imports: [
   ],
   exports: [
-    PocMfNgLibComponent
+    PocMfNgLibComponent,
+    CalculatorComponent
   ]
 })
 export class PocMfNgLibModule { }
