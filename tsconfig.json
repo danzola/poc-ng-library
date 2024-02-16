@@ -16,6 +16,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "poc-mf-ng-lib": [
+        "dist/poc-mf-ng-lib"
+      ]
+    },
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
