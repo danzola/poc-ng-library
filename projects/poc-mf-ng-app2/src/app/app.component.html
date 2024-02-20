@@ -1,0 +1,12 @@
+<h1>Load Centers</h1>
+<div *ngIf="createContact">
+    <div>
+        <label>LoadCenter:</label>
+        <input type="text" />
+    </div>
+    <div>
+        <label>Contact:</label>
+        <input type="text" [(ngModel)]="selectedContact" placeholder="Search contact" (click)="search()">
+    </div>
+</div>
+<lib-contact-list></lib-contact-list>

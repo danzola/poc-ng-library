@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
-import { PocMfNgLibModule } from 'poc-mf-ng-lib'
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PocMfNgLibModule } from 'poc-mf-ng-lib'
 
 @NgModule({
   declarations: [
@@ -12,7 +11,6 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     PocMfNgLibModule,
     FormsModule
   ],
