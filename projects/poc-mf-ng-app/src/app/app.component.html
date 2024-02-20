@@ -1,6 +1,13 @@
-<input type="number" [(ngModel)]="numero1" placeholder="Ingrese el primer número">
-<lib-calculator [numero1]="numero1"></lib-calculator>
-<button (click)="sumar()">Sumar</button>
-<div *ngIf="resultado !== null && resultado > 0">
-    <p>El resultado de la suma es: {{ resultado }}</p>
-</div>
+<router-outlet>
+    <div *ngIf="createContact">
+        <div>
+            <label>Company:</label>
+            <input type="text" />
+        </div>
+        <div>
+            <label>Contact:</label>
+            <input type="text" [(ngModel)]="selectedContact" placeholder="Search contact" (click)="search()">
+        </div>
+    </div>
+    <lib-contact-list></lib-contact-list>    
+</router-outlet>

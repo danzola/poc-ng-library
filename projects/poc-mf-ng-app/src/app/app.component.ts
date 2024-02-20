@@ -1,19 +1,29 @@
-import { Component, ViewChild } from '@angular/core';
-import { CalculatorComponent } from 'poc-mf-ng-lib';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { ContactListComponent } from 'poc-mf-ng-lib';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-  @ViewChild(CalculatorComponent)
-  calculator!: CalculatorComponent;
+export class AppComponent implements AfterViewInit {
+  @ViewChild(ContactListComponent)
+  contactList!: ContactListComponent;
+  selectedContact: string = '';
+  createContact: boolean = true;
 
-  numero1: number = 0;
-  resultado: number = 0;
+  search(): void {
+    this.setStateSearch(true);
+  }
 
-  sumar() {
-    this.resultado = this.calculator.sumar();
+  ngAfterViewInit(): void {
+    this.contactList.contactSelected.subscribe(contact => {      
+      this.selectedContact = contact.name;
+      this.setStateSearch(false);
+    });
+  }
+
+  setStateSearch(state: boolean): void{
+    this.createContact = !state;
+    this.contactList.searchVisible = state;
   }
 }

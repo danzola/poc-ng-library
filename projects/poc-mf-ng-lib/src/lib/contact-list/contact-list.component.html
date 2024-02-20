@@ -1,0 +1,30 @@
+<style>
+  .contact-table {
+    cursor: pointer;
+  }
+
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto
+  }
+</style>
+
+<div class="form-container" *ngIf="searchVisible">
+  <input [(ngModel)]="searchTerm" (input)="searchContacts()" placeholder="Search contacts">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody class="contact-table">
+      <tr *ngFor="let contact of contacts" (click)="selectContact(contact)">
+        <td>{{ contact.id }}</td>
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,21 +1,18 @@
 import { NgModule } from '@angular/core';
-import { PocMfNgLibComponent } from './poc-mf-ng-lib.component';
-import { CalculatorComponent } from './calculator/calculator.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ContactListComponent } from './contact-list/contact-list.component';
 
 @NgModule({
   declarations: [
-    PocMfNgLibComponent,
-    CalculatorComponent
+    ContactListComponent
   ],
   imports: [
     FormsModule,
     CommonModule
   ],
-  exports: [
-    PocMfNgLibComponent,
-    CalculatorComponent
+  exports: [    
+    ContactListComponent
   ]
 })
 export class PocMfNgLibModule { }
