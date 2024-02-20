@@ -1,2 +1,6 @@
-<lib-poc-mf-ng-lib></lib-poc-mf-ng-lib>
-<lib-calculator></lib-calculator>
+<input type="number" [(ngModel)]="numero1" placeholder="Ingrese el primer número">
+<lib-calculator [numero1]="numero1"></lib-calculator>
+<button (click)="sumar()">Sumar</button>
+<div *ngIf="resultado !== null && resultado > 0">
+    <p>El resultado de la suma es: {{ resultado }}</p>
+</div>

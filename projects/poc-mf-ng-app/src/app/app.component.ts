@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { CalculatorComponent } from 'poc-mf-ng-lib';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'poc-mf-ng-app';
+  @ViewChild(CalculatorComponent)
+  calculator!: CalculatorComponent;
+
+  numero1: number = 0;
+  resultado: number = 0;
+
+  sumar() {
+    this.resultado = this.calculator.sumar();
+  }
 }

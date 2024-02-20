@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PocMfNgLibModule } from 'poc-mf-ng-lib'
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { PocMfNgLibModule } from 'poc-mf-ng-lib'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PocMfNgLibModule
+    PocMfNgLibModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
